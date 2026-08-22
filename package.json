@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/types",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Custom TypeScript types",
   "keywords": [
     "custom",
@@ -21,12 +21,10 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
-    "build": "bun run build:clean && bun run build:dts && bun run build:copy",
-    "build:clean": "bun run --bun rimraf dist",
-    "build:copy": "cp -f LICENSE package.json README.md dist/",
-    "build:dts": "bun run --bun tsc --declaration --emitDeclarationOnly --outDir dist --noEmit false --skipLibCheck",
+    "build": "bun run build:clean && bun run build:copy",
+    "build:clean": "bun run --bun rimraf dist/*",
+    "build:copy": "cp -fp LICENSE package.json README.md index.js index.d.ts dist/",
     "check": "bunx --bun depcheck --ignores=\"@types/*,rimraf\" || :",
-    "clean": "bun run --bun rimraf bun.lock dist",
     "preinstall": "bunx --bun only-allow bun",
     "lint": "bun run scan && bun run lint:spell && bun run lint:biome && bun run lint:ts",
     "lint:biome": "bun run --bun biome check --write --verbose --error-on-warnings",
