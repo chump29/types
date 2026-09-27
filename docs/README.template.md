@@ -13,7 +13,8 @@
 ![CodeQL](https://github.com/$_user/$_repo/workflows/CodeQL/badge.svg "CodeQL")
 
 ![NO AI](https://img.shields.io/badge/NO-AI-orange?style=plastic "NO AI") &nbsp;
-![License](https://img.shields.io/github/license/$_user/$_repo?style=plastic&color=blueviolet&label=License&logo=gplv3 "GPLv3")
+![License](https://img.shields.io/github/license/$_user/$_repo?style=plastic&color=blueviolet&label=License&logo=gplv3 "GPLv3") &nbsp; <!-- markdownlint-disable MD013 -->
+![CVE Scan](https://img.shields.io/badge/CVE%20Scan-Pass-success?style=plastic&logo=owasp "CVE Scan")
 
 ---
 
@@ -26,9 +27,11 @@ bun add @postfmly/types
 ### Use
 
 ```ts
-const foo: Nullable<T> // T | null
-const bar: Nullish<T>  // T | null | undefined
-const baz: Optional<T> // T | undefined
+import { Nullable, Nullish, Optional } from "@postfmly/types"
+
+const foo: Nullable<T> = null // T | null
+const bar: Nullish<T> = undefined ?? null // T | null | undefined
+const baz: Optional<T> = undefined // T | undefined
 ```
 
 ---

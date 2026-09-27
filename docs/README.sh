@@ -5,7 +5,7 @@ export _repo=types
 
 echo -e "📌 Packages:\n"
 
-_bun=$(jq -r '.engines.bun // "❓"' ../package.json)
+_bun=$(bun --version)
 export _bun
 echo -e " • Bun: $_bun"
 
