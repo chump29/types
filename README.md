@@ -8,7 +8,7 @@
 
 ---
 
-![Bun](https://img.shields.io/badge/Bun-1.4.2-informational?style=plastic&logo=bun "Bun")
+![Bun](https://img.shields.io/badge/Bun-1.4.3-informational?style=plastic&logo=bun "Bun")
 
 ![CodeQL](https://github.com/chump29/types/workflows/CodeQL/badge.svg "CodeQL")
 
