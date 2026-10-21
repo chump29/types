@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/types",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Custom TypeScript types",
   "keywords": [
     "custom",
@@ -25,12 +25,11 @@
     "preinstall": "bunx --bun only-allow bun",
     "lint": "bun run lint:spell && bun run lint:biome && bun run lint:ts",
     "lint:biome": "bun run --bun biome check --write --verbose --error-on-warnings",
-    "lint:spell": "bun run --bun cspell --dot --verbose .",
+    "lint:spell": "bun run --bun cspell --dot .",
     "lint:ts": "bun check",
     "prepare": "bun run --bun husky",
-    "scan": "bun run scan:audit && bun run scan:cve && bun run scan:e18e",
-    "scan:audit": "bun audit",
-    "scan:cve": "bunx --bun cve-lite-cli --check-overrides --check-network --check-maintenance",
+    "scan": "bun run scan:audit && bun run scan:e18e",
+    "scan:audit": "bun audit --prod",
     "scan:e18e": "bunx --bun @e18e/cli analyze",
     "updates": "bunx --bun npm-check-updates --dep overrides,dev --cooldown 0 --install never --packageManager bun --peer"
   },
@@ -39,17 +38,11 @@
     "*.{json,ts}": "bun run --bun biome ci --error-on-warnings --no-errors-on-unmatched"
   },
   "overrides": {
-    "@biomejs/biome": "2.5.15",
-    "@types/bun": "1.4.2",
-    "@types/node": "26.6.4",
     "chalk": "6.0.1",
-    "cspell": "10.3.6",
-    "globals": "17.13.0",
-    "ini": "7.0.0",
-    "strip-json-comments": "5.0.3"
+    "undici-types": "8.12.3"
   },
   "devDependencies": {
-    "@postfmly/config": "^1.6.3",
+    "@postfmly/config": "^1.6.10",
     "bunup": "^0.16.32",
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0"

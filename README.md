@@ -58,7 +58,7 @@ bun run lint
 ./build.sh
 ```
 
-###### *NOTE: Includes linting and building README*
+###### _NOTE: Includes linting and building README_
 
 ---
 
@@ -70,11 +70,11 @@ bun run lint
 ./publish.sh
 ```
 
-###### *NOTES:*
+###### _NOTES:_
 
-- ###### *Includes building package*
+- ###### _Includes building package_
 
-- ###### *Increments `patch` version in `package.json`*
+- ###### _Increments `patch` version in `package.json`_
 
 #### Unpublish:
 
