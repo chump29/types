@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/types",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Custom TypeScript types",
   "keywords": [
     "custom",
@@ -42,7 +42,7 @@
     "undici-types": "8.12.3"
   },
   "devDependencies": {
-    "@postfmly/config": "^1.6.10",
+    "@postfmly/config": "^1.6.11",
     "bunup": "^0.16.32",
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0"
