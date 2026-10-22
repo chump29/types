@@ -1,6 +1,6 @@
 {
   "name": "@postfmly/types",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Custom TypeScript types",
   "keywords": [
     "custom",
@@ -28,9 +28,9 @@
     "lint:spell": "bun run --bun cspell --dot .",
     "lint:ts": "bun check",
     "prepare": "bun run --bun husky",
-    "scan": "bun run scan:audit && bun run scan:e18e",
-    "scan:audit": "bun audit --prod",
-    "scan:e18e": "bunx --bun @e18e/cli analyze",
+    "scan": "bun run scan:audit && bun run scan:dupe",
+    "scan:audit": "bun audit --production",
+    "scan:dupe": "bun dedupe --check",
     "updates": "bunx --bun npm-check-updates --dep overrides,dev --cooldown 0 --install never --packageManager bun --peer"
   },
   "lint-staged": {
@@ -38,18 +38,17 @@
     "*.{json,ts}": "bun run --bun biome ci --error-on-warnings --no-errors-on-unmatched"
   },
   "overrides": {
-    "chalk": "6.0.1",
     "undici-types": "8.12.3"
   },
   "devDependencies": {
-    "@postfmly/config": "^1.6.11",
+    "@postfmly/config": "^1.6.13",
     "bunup": "^0.16.32",
     "husky": "^9.1.7",
     "lint-staged": "^17.6.0"
   },
-  "packageManager": "bun@1.4.3",
+  "packageManager": "bun@1.4.4",
   "engines": {
-    "bun": "^1.4.3"
+    "bun": "^1.4.4"
   },
   "engineStrict": true
 }
